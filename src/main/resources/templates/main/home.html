@@ -1,0 +1,14 @@
+<!doctype html>
+<!--<html lang="en">-->
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: header" ></head>
+<body>
+    <nav th:replace="layout :: nav" ></nav>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6"><h1>Projects <span class="badge badge-secondary" th:text="${projectsNumber}" ></span></h1></div>
+        <div class="col-6"><h1>Employees <span class="badge badge-secondary" th:text="${employeesNumber}"></span></h1></div>
+    </div>
+</div>
+</body>
+</html>
