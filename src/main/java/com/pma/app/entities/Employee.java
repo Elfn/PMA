@@ -16,8 +16,10 @@ import java.util.List;
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    //IDENTITY to use data.sql file
+    //AUTO to use CommandLineRunner Data
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long employee_id;
 
     private String firstName;
     private String LastName;

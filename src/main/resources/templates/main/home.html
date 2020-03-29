@@ -5,9 +5,14 @@
 <body>
     <nav th:replace="layout :: nav" ></nav>
 <div class="container mt-5">
-    <div class="row">
-        <div class="col-6"><h1>Projects <span class="badge badge-secondary" th:text="${projectsNumber}" ></span></h1></div>
-        <div class="col-6"><h1>Employees <span class="badge badge-secondary" th:text="${employeesNumber}"></span></h1></div>
+    <div class="row mb-5">
+        <div class="col-4"><h1> <span class="badge badge-secondary"></span></h1></div>
+        <div class="col-4 text-center"><h1> <span class="badge" style="background-color: orangered;color: whitesmoke;">PMA</span></h1></div>
+        <div class="col-4"><h1> <span class="badge badge-secondary"></span></h1></div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-6 text-center"><h1>Projects <span class="badge badge-secondary" th:text="${projectsNumber}" ></span></h1></div>
+        <div class="col-6 text-center"><h1>Employees <span class="badge badge-secondary" th:text="${employeesNumber}"></span></h1></div>
     </div>
 </div>
 </body>

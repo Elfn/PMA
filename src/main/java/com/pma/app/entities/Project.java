@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,8 +18,10 @@ import java.util.List;
 public class Project {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    //IDENTITY to use data.sql file
+    //AUTO to use CommandLineRunner Data
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long project_id;
     private String name;
     private String stage; //NOTSTARTED COMPLETED INPROGRESS
     private String description;
@@ -31,5 +34,14 @@ public class Project {
         this.name = name;
         this.stage = stage;
         this.description = description;
+    }
+
+    public void addEmployee(Employee employee)
+    {
+        if(!employee.equals(null))
+            employees = new ArrayList<>();
+
+
+        this.employees.add(employee);
     }
 }
