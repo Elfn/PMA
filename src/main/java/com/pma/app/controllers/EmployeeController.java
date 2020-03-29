@@ -35,10 +35,8 @@ public class EmployeeController {
     {
         empRepo.save(employee);
 
-        //model.addAttribute("project", new Project());
-
         //Use redirect to prevent duplicate submissions
-        return "redirect:/home";
+        return "redirect:/employees";
     }
 
     @GetMapping
