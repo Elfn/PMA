@@ -46,7 +46,7 @@ public class ProjectController {
             emp.setProject(project);
             empRepo.save(emp);
         });
-        
+
         //Use redirect to prevent duplicate submissions
         return "redirect:/home";
     }
