@@ -18,6 +18,14 @@
             <label for="name">Email</label>
             <input type="text" th:field="${employee.email}" class="form-control" id="name" placeholder="Employee email">
         </div>
+        <div class="form-group">
+            <label for="stage">Stage</label>
+            <select class="form-control" id="stage" th:field="${employee.status}">
+                <option th:value="SENIOR"> Senior</option>
+                <option th:value="JUNIOR"> Junior</option>
+                <option th:value="INTERMEDIARY"> Intermediary</option>
+            </select>
+        </div>
 
         <button type="submit" class="btn btn-primary">Create Employee</button>
     </form>

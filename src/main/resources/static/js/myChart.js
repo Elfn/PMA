@@ -1,5 +1,5 @@
 // For a pie chart
-new Chart(document.getElementById("myPieChart"), {
+new Chart(document.getElementById("myPieChartProjects"), {
     type: 'doughnut',
     data: {
         labels: ['NOT STARTED', 'COMPLETED', 'IN PROGRESS'],
@@ -15,10 +15,10 @@ new Chart(document.getElementById("myPieChart"), {
     options: {}
 })
 
-new Chart(document.getElementById("myPieChart2"), {
+new Chart(document.getElementById("myPieChartEmployees"), {
     type: 'doughnut',
     data: {
-        labels: ['NOT STARTED', 'COMPLETED', 'IN PROGRESS'],
+        labels: ['SENIOR', 'JUNIOR', 'INTERMEDIARY'],
         datasets: [{
             label: 'My First dataset',
             backgroundColor: ['blue','red','gray'],

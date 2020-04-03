@@ -24,8 +24,11 @@ public class HomeController {
     @GetMapping({ "/home", "/" })
     public String displayHome(Model model)
     {
-       model.addAttribute("projectsNumber", proRepo.count());
+        model.addAttribute("projectsNumber", proRepo.count());
         model.addAttribute("employeesNumber", empRepo.count());
+        model.addAttribute("notStartedProjectsNumber", proRepo.findCountProjectsByStage("NOTSTARTED"));
+        model.addAttribute("inProgressProjectsNumber", proRepo.findCountProjectsByStage("INPROGRESS"));
+        model.addAttribute("completedProjectsNumber", proRepo.findCountProjectsByStage("COMPLETED"));
 
         return "/main/home";
     }
