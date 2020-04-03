@@ -5,7 +5,6 @@ import com.pma.app.dao.ProjectRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Created by Elimane on Mar, 2020, at 04:39
