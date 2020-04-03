@@ -11,9 +11,36 @@
         <div class="col-4"><h1> <span class="badge badge-secondary"></span></h1></div>
     </div>
     <div class="row mt-5">
-        <div class="col-6 text-center"><h1>Projects <span class="badge badge-secondary" th:text="${projectsNumber}" ></span></h1></div>
-        <div class="col-6 text-center"><h1>Employees <span class="badge badge-secondary" th:text="${employeesNumber}"></span></h1></div>
+<!--        <div class="col-5 text-center pb-3" style="background-color: lightgray"><h1>Projects <span class="badge badge-secondary " th:text="${projectsNumber}" ></span></h1><canvas id="myPieChart" height="10" width="10" ></canvas></div>-->
+
+        <div class="card col-5" style="width: 18rem;">
+            <div class="card-header">
+                <div class="text-left"><h5><a th:href="@{/projects}" style="text-decoration: none;color: black">Employees <span class="badge badge-secondary" th:text="${employeesNumber}"></span></a></h5></div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><canvas id="myPieChart" height="10" width="10" ></canvas></li>
+            </ul>
+        </div>
+        <div class="col-2 text-center"></div>
+        <div class="card col-5" style="width: 18rem;">
+            <div class="card-header">
+                <div class="text-left"><h5><a th:href="@{/projects}" style="text-decoration: none;color: black">Projects <span class="badge badge-secondary" th:text="${projectsNumber}"></span></h5></a></div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><canvas id="myPieChart2" height="10" width="10" ></canvas></li>
+            </ul>
+        </div>    <div class="row mt-5">
+        <div class="col-4 text-center">
+
+        </div>
+        <div class="col-4 text-center">
+
+        </div>
+        <div class="col-4 text-center">
+
+        </div>
     </div>
 </div>
+    <script type="text/javascript" th:src="@{/js/myChart.js}" ></script>
 </body>
 </html>
