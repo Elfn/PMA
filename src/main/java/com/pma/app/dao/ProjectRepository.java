@@ -1,5 +1,6 @@
 package com.pma.app.dao;
 
+import com.pma.app.dto.DataChart;
 import com.pma.app.entities.Project;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -12,6 +13,9 @@ import java.util.List;
  */
 public interface ProjectRepository  extends CrudRepository<Project, Long> {
 
-    @Query(nativeQuery = true , value = "SELECT COUNT(p.project_id) FROM Project p WHERE p.stage = :stage")
-    public List<Integer> findCountProjectsByStage(@Param("stage") String stage);
+//    @Query(nativeQuery = true , value = "SELECT COUNT(p.project_id) FROM Project p WHERE p.stage = :stage")
+//    public List<Integer> findCountProjectsByStage(@Param("stage") String stage);
+
+    @Query(nativeQuery = true , value = "SELECT p.stage as label, COUNT(*) as value FROM Project p GROUP BY stage")
+    public List<DataChart> findCountProjectsByStage();
 }

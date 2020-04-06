@@ -25,7 +25,7 @@
                 <div class="form-group">
                     <label for="employees">Employees</label>
                     <select multiple="multiple" class="form-control" id="employees" th:field="*{employees}">
-                        <option th:each = "employee : ${allEmployees}" th:value="${employee.id}" th:text="${employee.firstName}+' '+${employee.lastName}"></option>
+                        <option th:each = "employee : ${allEmployees}" th:value="${employee.employee_id}" th:text="${employee.firstName}+' '+${employee.lastName}"></option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-primary">Create Project</button>
