@@ -3,6 +3,7 @@ package com.pma.app.controllers;
 import com.pma.app.dao.EmployeeRepository;
 import com.pma.app.entities.Employee;
 import com.pma.app.entities.Project;
+import com.pma.app.services.EmployeeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/employees")
 public class EmployeeController {
 
-    private final EmployeeRepository empRepo;
+    private final EmployeeService empServ;
 
-    public EmployeeController(EmployeeRepository empRepo) {
-        this.empRepo = empRepo;
+    public EmployeeController(EmployeeService empServ) {
+        this.empServ = empServ;
     }
 
     @GetMapping("/new")
@@ -33,7 +34,7 @@ public class EmployeeController {
     @PostMapping("/save")
     public String createEmployee(Employee employee, Model model)
     {
-        empRepo.save(employee);
+        empServ.save(employee);
 
         //Use redirect to prevent duplicate submissions
         return "redirect:/employees";
@@ -42,7 +43,7 @@ public class EmployeeController {
     @GetMapping
     public String displayEmployees(Model model)
     {
-        model.addAttribute("allEmployees", empRepo.findAll());
+        model.addAttribute("allEmployees", empServ.findAll());
 
         return "employees/employees";
     }

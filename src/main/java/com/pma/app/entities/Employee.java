@@ -18,7 +18,8 @@ public class Employee {
     @Id
     //IDENTITY to use data.sql file
     //AUTO to use CommandLineRunner Data
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "employee_seq")//SEQUENCE IS MOST FASTER
+    @SequenceGenerator(name="employee_seq",sequenceName="employee_seq", allocationSize = 1)
     private long employee_id;
 
     private String firstName;
@@ -34,5 +35,6 @@ public class Employee {
         LastName = lastName;
         this.email = email;
     }
+
 }
 

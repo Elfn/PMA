@@ -7,22 +7,28 @@ import com.pma.app.entities.Project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import java.util.Arrays;
 
 @SpringBootApplication
+@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AppApplication {
-    @Autowired
-    private EmployeeRepository empRepo;
-    @Autowired
-    private ProjectRepository projRepo;
+//    @Autowired
+//    private EmployeeRepository empRepo;
+//    @Autowired
+//    private ProjectRepository projRepo;
 
     public static void main(String[] args) {
         SpringApplication.run(AppApplication.class, args);
     }
 
+
+//A bean is an object managed and instanciated
+//by the IoC container of spring
 //    @Bean
 //    CommandLineRunner runner()
 //    {

@@ -1,0 +1,3 @@
+DROP TABLE project_employee CASCADE ;
+DROP TABLE project CASCADE;
+DROP TABLE employee CASCADE;

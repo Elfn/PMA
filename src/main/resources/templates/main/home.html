@@ -1,13 +1,16 @@
 <!doctype html>
 <!--<html lang="en">-->
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head th:replace="layout :: header" ></head>
 <body>
     <nav th:replace="layout :: nav" ></nav>
 <div class="container mt-5">
     <div class="row mb-5">
         <div class="col-4"><h1> <span class="badge badge-secondary"></span></h1></div>
-        <div class="col-4 text-center"><h1> <span class="badge" style="background-color: orangered;color: whitesmoke;">PMA</span></h1></div>
+        <div class="col-4 text-center"><h1> <span class="badge" style="background-color: orangered;color: whitesmoke;" th:text="${appName}" ></span></h1></div>
         <div class="col-4"><h1> <span class="badge badge-secondary"></span></h1></div>
     </div>
     <div class="row mt-5">
@@ -24,7 +27,7 @@
         <div class="col-2 text-center"></div>
         <div class="card col-4" style="width: 18rem;">
             <div class="card-header">
-                <div class="text-left"><h5><a th:href="@{/projects}" style="text-decoration: none;color: black">Projects <span class="badge badge-secondary" th:text="${projectsNumber}"></span></h5></a></div>
+                <div class="text-left"><h5><a th:href="@{/projects}" style="text-decoration: none;color: black">Projects <span class="badge badge-secondary" th:text="${projectsNumber}"></span></a></h5></div>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item"><canvas id="myPieChartProjects" height="10" width="10" ></canvas></li>

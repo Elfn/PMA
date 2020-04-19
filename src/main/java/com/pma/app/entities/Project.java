@@ -20,7 +20,8 @@ public class Project {
     @Id
     //IDENTITY to use data.sql file
     //AUTO to use CommandLineRunner Data
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE , generator = "project_seq")
+    @SequenceGenerator(name="project_seq",sequenceName="project_seq", allocationSize = 1)
     private long project_id;
     private String name;
     private String stage; //NOTSTARTED COMPLETED INPROGRESS

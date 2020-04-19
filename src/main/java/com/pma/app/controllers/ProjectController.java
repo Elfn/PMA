@@ -4,6 +4,9 @@ import com.pma.app.dao.EmployeeRepository;
 import com.pma.app.dao.ProjectRepository;
 import com.pma.app.entities.Employee;
 import com.pma.app.entities.Project;
+import com.pma.app.services.EmployeeService;
+import com.pma.app.services.ProjectService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,19 +23,18 @@ import java.util.List;
 @RequestMapping("/projects")
 public class ProjectController {
 
-    private  final ProjectRepository proRepo;
-    private  final EmployeeRepository empRepo;
+    @Autowired
+    private ProjectService proServ;
+    @Autowired
+    private EmployeeService empServ;
 
-    public ProjectController(ProjectRepository proRepo, EmployeeRepository empRepo) {
-        this.proRepo = proRepo;
-        this.empRepo = empRepo;
-    }
+
 
     @GetMapping("/new")
     public String displayProjectForm(Model model)
     {
         model.addAttribute("project", new Project());
-        model.addAttribute("allEmployees", empRepo.findAll());
+        model.addAttribute("allEmployees", empServ.findAll());
 
             return "projects/new-project";
     }
@@ -55,7 +57,7 @@ public class ProjectController {
     public String createProject(Project project)
     {
 
-       proRepo.save(project);
+       proServ.save(project);
 
         //Use redirect to prevent duplicate submissions
         return "redirect:/projects";
@@ -64,7 +66,7 @@ public class ProjectController {
     @GetMapping
     public String displayProjects(Model model)
     {
-        model.addAttribute("projects", proRepo.findAll());
+        model.addAttribute("projects", proServ.findAll());
 
         return "projects/projects";
     }
