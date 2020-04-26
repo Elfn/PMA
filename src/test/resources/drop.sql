@@ -1,3 +1,3 @@
-DROP TABLE project_employee CASCADE ;
-DROP TABLE project CASCADE;
-DROP TABLE employee CASCADE;
+DROP TABLE project_employee IF EXISTS ;
+DROP TABLE project IF EXISTS ;
+DROP TABLE employee IF EXISTS ;

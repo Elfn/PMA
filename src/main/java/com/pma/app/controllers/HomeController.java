@@ -79,7 +79,7 @@ public class HomeController {
 
         Employee emp = empServ.findById(empId).get();
 
-        if(emp.equals(null))
+        if(emp == null)
         {
             throw new Exception("Any Employee found!!");
         }
