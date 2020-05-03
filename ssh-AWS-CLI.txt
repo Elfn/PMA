@@ -1,0 +1,17 @@
+ssh -i "pma-key.pem" ubuntu@13.58.53.31 => To start AWS ubuntu instance from my MAC throught ssh
+
+vi .bashrc => To enter environment variables
+source ~/.bashrc
+
+#UPLOAD PMA KEY AND APPLICATION JAR INTO UBUNTU AWS EC2 INSTANCE
+sudo scp -i /Users/Elimane/Desktop/pma-key.pem  target/app-0.0.1-SNAPSHOT.jar ubuntu@13.58.53.31:/home/ubuntu
+
+
+https://tecadmin.net/install-postgresql-server-on-ubuntu/
+
+
+#To create DB
+createdb -O admin pmadb
+
+TO connect to db password => admin
+psql admin -h 127.0.0.1 -d pmadb

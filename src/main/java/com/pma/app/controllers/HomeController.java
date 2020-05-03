@@ -61,7 +61,7 @@ public class HomeController {
         model.addAttribute("employeesProjectCount", empServ.employeeProjects());
 
 
-        return "/main/home";
+        return "main/home";
     }
 
 //    @GetMapping("/employees/all")
