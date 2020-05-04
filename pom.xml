@@ -82,6 +82,7 @@
                 <filtering>true</filtering>
             </resource>
         </resources>
+        <finalName>pma</finalName>
     </build>
 
 </project>
