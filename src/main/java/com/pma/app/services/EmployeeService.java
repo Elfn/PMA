@@ -17,11 +17,13 @@ import java.util.Optional;
 @Service
 public class EmployeeService implements EmployeeRepository{
 
-    @Qualifier("employeeRepository")
     @Autowired
-    private EmployeeRepository empRepo;
+    //@Qualifier(value = "employeeRepository")
+    private  EmployeeRepository empRepo;
 
-//    @Autowired
+
+
+    //    @Autowired
 //    public void setEmpRepo(@Qualifier("employeeRepository") EmployeeRepository empRepo) {
 //        this.empRepo = empRepo;
 //    }

@@ -15,7 +15,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import java.util.Arrays;
 
 @SpringBootApplication
-@EnableAspectJAutoProxy(proxyTargetClass = true)
+//@EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AppApplication {
 //    @Autowired
 //    private EmployeeRepository empRepo;

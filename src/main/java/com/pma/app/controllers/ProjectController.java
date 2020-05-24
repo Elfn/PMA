@@ -23,12 +23,15 @@ import java.util.List;
 @RequestMapping("/projects")
 public class ProjectController {
 
-    @Autowired
-    private ProjectService proServ;
-    @Autowired
-    private EmployeeService empServ;
 
+    private final ProjectService proServ;
 
+    private final EmployeeService empServ;
+
+    public ProjectController(ProjectService proServ, EmployeeService empServ) {
+        this.proServ = proServ;
+        this.empServ = empServ;
+    }
 
     @GetMapping("/new")
     public String displayProjectForm(Model model)

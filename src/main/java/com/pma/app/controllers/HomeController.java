@@ -28,10 +28,15 @@ import java.util.Map;
 @Slf4j
 public class HomeController {
 
-    @Autowired
-    private ProjectService proServ;
-    @Autowired
-    private  EmployeeService empServ;
+
+    private final ProjectService proServ;
+
+    private final EmployeeService empServ;
+
+    public HomeController(ProjectService proServ, EmployeeService empServ) {
+        this.proServ = proServ;
+        this.empServ = empServ;
+    }
 
     @Value("${application.name}")
     private String applicationName;

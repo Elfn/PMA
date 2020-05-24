@@ -4,6 +4,8 @@ import com.pma.app.dao.EmployeeRepository;
 import com.pma.app.entities.Employee;
 import com.pma.app.entities.Project;
 import com.pma.app.services.EmployeeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,11 +19,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/employees")
 public class EmployeeController {
 
-    private final EmployeeService empServ;
+    @Autowired
+    //@Qualifier("employeeService")
+    private  EmployeeService empServ;
 
-    public EmployeeController(EmployeeService empServ) {
-        this.empServ = empServ;
-    }
 
     @GetMapping("/new")
     public String displayEmployeeForm(Model model)
