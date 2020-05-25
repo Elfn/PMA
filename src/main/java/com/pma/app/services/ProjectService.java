@@ -17,6 +17,7 @@ import java.util.Optional;
 public class ProjectService implements ProjectRepository {
     //Field injection
 
+    @Qualifier("projectRepository")
     @Autowired
     private ProjectRepository proRepo;
 

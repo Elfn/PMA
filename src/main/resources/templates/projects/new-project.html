@@ -5,7 +5,7 @@
 <body>
 <nav th:replace="layout :: nav" ></nav>
         <div class="container mt-5">
-            <form action="/projects/save" th:object="${project}" method="POST">
+            <form th:action="@{/projects/save}" th:object="${project}" method="POST">
                 <div class="form-group">
                     <label for="name">Project name</label>
                     <input type="text" th:field="${project.name}" class="form-control" id="name" placeholder="Enter project's name">
