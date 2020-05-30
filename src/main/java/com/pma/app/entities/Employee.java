@@ -33,10 +33,11 @@ public class Employee {
     private List<Project> projects;
     private String status;
 
-    public Employee(String firstName, String lastName, String email) {
+    public Employee(String firstName, String lastName, String email, String status) {
         this.firstName = firstName;
         LastName = lastName;
         this.email = email;
+        this.status = status;
     }
 
 }

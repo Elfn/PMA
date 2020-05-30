@@ -22954,3 +22954,820 @@ Caused by: java.lang.ClassNotFoundException: com.pma.app.entities.Employee
  
  
 
+2020-05-30 18:21:21.806  INFO 28750 --- [Thread-45] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:21:21.810  INFO 28750 --- [Thread-45] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:21:22.397  INFO 28750 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 28750 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 18:21:22.397 DEBUG 28750 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 18:21:22.397  INFO 28750 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 18:21:22.727  INFO 28750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 18:21:22.744 ERROR 28750 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type com.pma.app.entities.Employee not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1137) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:492) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.core.GenericTypeResolver.buildTypeVariableMap(GenericTypeResolver.java:271) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.core.GenericTypeResolver.getTypeVariableMap(GenericTypeResolver.java:248) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:115) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:104) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.<init>(ClassTypeInformation.java:93) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330) ~[na:na]
+	at org.springframework.data.util.ClassTypeInformation.from(ClassTypeInformation.java:71) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.<init>(AbstractRepositoryMetadata.java:58) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:52) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:73) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:102) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:148) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:385) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:384) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.pma.app.AppApplication.main(AppApplication.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+Caused by: java.lang.ClassNotFoundException: com.pma.app.entities.Employee
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 45 common frames omitted
+
+2020-05-30 18:29:57.958  INFO 28750 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 18:29:57.960  INFO 28750 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 18:29:58.134  INFO 28750 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 28750 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 18:29:58.134 DEBUG 28750 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 18:29:58.134  INFO 28750 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 18:29:58.508  INFO 28750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 18:29:58.517 ERROR 28750 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.TypeNotPresentException: Type com.pma.app.entities.Project not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1137) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:492) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.core.GenericTypeResolver.buildTypeVariableMap(GenericTypeResolver.java:271) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.core.GenericTypeResolver.getTypeVariableMap(GenericTypeResolver.java:248) ~[spring-core-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:115) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.getTypeVariableMap(ClassTypeInformation.java:104) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.util.ClassTypeInformation.<init>(ClassTypeInformation.java:93) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.util.concurrent.ConcurrentMap.computeIfAbsent(ConcurrentMap.java:330) ~[na:na]
+	at org.springframework.data.util.ClassTypeInformation.from(ClassTypeInformation.java:71) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.<init>(AbstractRepositoryMetadata.java:58) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:52) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:73) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:102) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:148) ~[spring-data-commons-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:385) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:384) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:236) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:275) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:95) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.pma.app.AppApplication.main(AppApplication.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+Caused by: java.lang.ClassNotFoundException: com.pma.app.entities.Project
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:398) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 45 common frames omitted
+
+2020-05-30 18:30:00.975  INFO 28750 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 18:30:00.975  INFO 28750 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 18:30:00.984  INFO 28750 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 28750 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 18:30:00.984 DEBUG 28750 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 18:30:00.985  INFO 28750 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 18:30:01.546  INFO 28750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 18:30:01.683  INFO 28750 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135ms. Found 3 JPA repository interfaces.
+2020-05-30 18:30:02.232  INFO 28750 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 18:30:02.247  INFO 28750 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1259 ms
+2020-05-30 18:30:02.309  INFO 28750 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 18:30:02.816  WARN 28750 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 18:30:03.757  INFO 28750 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:30:03.852  WARN 28750 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 18:30:03.894  INFO 28750 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3e734dd3, org.springframework.security.web.context.SecurityContextPersistenceFilter@7fe37310, org.springframework.security.web.header.HeaderWriterFilter@23b45b42, org.springframework.security.web.csrf.CsrfFilter@31a965d2, org.springframework.security.web.authentication.logout.LogoutFilter@18f0032, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@42819d7d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1dc61e53, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@29be0f9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@694e1852, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68212072, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3586155, org.springframework.security.web.session.SessionManagementFilter@51e1194, org.springframework.security.web.access.ExceptionTranslationFilter@14804771, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5cdbb32c]
+2020-05-30 18:30:03.959  INFO 28750 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:30:04.053  INFO 28750 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 18:30:04.192  INFO 28750 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-30 18:30:04.193  INFO 28750 --- [restartedMain] com.pma.app.AppApplication               : Started AppApplication in 3.24 seconds (JVM running for 2976.544)
+2020-05-30 18:30:04.194  INFO 28750 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 18:49:02.424  INFO 28750 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:49:02.425  INFO 28750 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:49:14.795  INFO 34803 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 34803 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 18:49:14.803 DEBUG 34803 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 18:49:14.803  INFO 34803 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 18:49:14.901  INFO 34803 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-30 18:49:14.903  INFO 34803 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 18:49:14.904  INFO 34803 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 18:49:16.565  INFO 34803 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 18:49:16.652  INFO 34803 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73ms. Found 3 JPA repository interfaces.
+2020-05-30 18:49:18.083  INFO 34803 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 18:49:18.224  INFO 34803 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3318 ms
+2020-05-30 18:49:18.433  INFO 34803 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 18:49:19.785  WARN 34803 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 18:49:19.894  INFO 34803 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:49:20.371  WARN 34803 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 18:49:20.569  INFO 34803 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@19cf6723, org.springframework.security.web.context.SecurityContextPersistenceFilter@455e3fa5, org.springframework.security.web.header.HeaderWriterFilter@7ce7e01c, org.springframework.security.web.csrf.CsrfFilter@6fe7e7a0, org.springframework.security.web.authentication.logout.LogoutFilter@4b79c32f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6cba5377, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@356f8325, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@67b86256, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26025fc8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c13d2d2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19b753f7, org.springframework.security.web.session.SessionManagementFilter@3352bec0, org.springframework.security.web.access.ExceptionTranslationFilter@cbaa48f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2c225d87]
+2020-05-30 18:49:20.859  INFO 34803 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:49:21.254  INFO 34803 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 18:49:21.539  WARN 34803 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-30 18:49:21.540  WARN 34803 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-30 18:49:21.544  INFO 34803 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-30 18:49:21.554 ERROR 34803 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.NullPointerException: null
+	at com.pma.app.bootstrapData.BootstrapDev.loadData(BootstrapDev.java:86) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.onApplicationEvent(BootstrapDev.java:40) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.onApplicationEvent(BootstrapDev.java:19) ~[classes/:na]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:897) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.pma.app.AppApplication.main(AppApplication.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+
+2020-05-30 18:49:21.564  INFO 34803 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:49:21.566  INFO 34803 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:50:14.737  INFO 34904 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 34904 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 18:50:14.743 DEBUG 34904 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 18:50:14.743  INFO 34904 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 18:50:14.822  INFO 34904 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-30 18:50:14.824  INFO 34904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 18:50:14.824  INFO 34904 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 18:50:16.509  INFO 34904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 18:50:16.642  INFO 34904 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121ms. Found 3 JPA repository interfaces.
+2020-05-30 18:50:17.996  INFO 34904 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 18:50:18.094  INFO 34904 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3269 ms
+2020-05-30 18:50:18.240  INFO 34904 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 18:50:19.257  WARN 34904 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 18:50:19.332  INFO 34904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:50:19.893  WARN 34904 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 18:50:20.055  INFO 34904 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29f4640e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c47fa9, org.springframework.security.web.header.HeaderWriterFilter@3cde1bc6, org.springframework.security.web.csrf.CsrfFilter@50c2359b, org.springframework.security.web.authentication.logout.LogoutFilter@14425ac, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1c4e8bbf, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3ed5574e, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7c3dceb1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@97a3e32, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@756ac6bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3a9c60fc, org.springframework.security.web.session.SessionManagementFilter@6e499f39, org.springframework.security.web.access.ExceptionTranslationFilter@16c2eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e83d77e]
+2020-05-30 18:50:20.222  INFO 34904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:50:20.531  INFO 34904 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 18:50:20.801  WARN 34904 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-30 18:50:20.801  WARN 34904 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-30 18:50:20.806  INFO 34904 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-30 18:50:20.814 ERROR 34904 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.NullPointerException: null
+	at com.pma.app.bootstrapData.BootstrapDev.loadData(BootstrapDev.java:89) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.onApplicationEvent(BootstrapDev.java:40) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.onApplicationEvent(BootstrapDev.java:19) ~[classes/:na]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:897) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.pma.app.AppApplication.main(AppApplication.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+
+2020-05-30 18:50:20.818  INFO 34904 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:50:20.820  INFO 34904 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:53:54.412  INFO 35245 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 35245 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 18:53:54.425 DEBUG 35245 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 18:53:54.426  INFO 35245 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 18:53:54.632  INFO 35245 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-30 18:53:54.636  INFO 35245 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 18:53:54.636  INFO 35245 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 18:53:56.248  INFO 35245 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 18:53:56.325  INFO 35245 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 3 JPA repository interfaces.
+2020-05-30 18:53:57.190  INFO 35245 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 18:53:57.319  INFO 35245 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2683 ms
+2020-05-30 18:53:57.519  INFO 35245 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 18:53:58.739  WARN 35245 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 18:53:58.817  INFO 35245 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:53:59.481  WARN 35245 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 18:53:59.950  INFO 35245 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e60e779, org.springframework.security.web.context.SecurityContextPersistenceFilter@7753e117, org.springframework.security.web.header.HeaderWriterFilter@7f10c86a, org.springframework.security.web.csrf.CsrfFilter@1e9917ea, org.springframework.security.web.authentication.logout.LogoutFilter@4cc4fd11, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@370751a9, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@42f6f428, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3327383b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a9deddd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@292fe6cd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23f6e4a8, org.springframework.security.web.session.SessionManagementFilter@df1f441, org.springframework.security.web.access.ExceptionTranslationFilter@3823cb5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@37c8565]
+2020-05-30 18:54:00.157  INFO 35245 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:54:00.671  INFO 35245 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 18:54:01.138  WARN 35245 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-30 18:54:01.139  WARN 35245 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-30 18:54:01.145  INFO 35245 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-30 18:54:01.160 ERROR 35245 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.NullPointerException: null
+	at com.pma.app.bootstrapData.BootstrapDev.loadData(BootstrapDev.java:89) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.onApplicationEvent(BootstrapDev.java:40) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.onApplicationEvent(BootstrapDev.java:19) ~[classes/:na]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:897) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.pma.app.AppApplication.main(AppApplication.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+
+2020-05-30 18:54:01.167  INFO 35245 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:54:01.169  INFO 35245 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:54:15.931  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 35297 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 18:54:15.936 DEBUG 35297 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 18:54:15.936  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 18:54:16.028  INFO 35297 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-30 18:54:16.029  INFO 35297 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 18:54:16.029  INFO 35297 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 18:54:17.742  INFO 35297 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 18:54:17.846  INFO 35297 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 3 JPA repository interfaces.
+2020-05-30 18:54:19.391  INFO 35297 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 18:54:19.550  INFO 35297 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3518 ms
+2020-05-30 18:54:19.821  INFO 35297 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 18:54:21.444  WARN 35297 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 18:54:21.542  INFO 35297 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 18:54:22.014  WARN 35297 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 18:54:22.177  INFO 35297 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32ee06e0, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a7085aa, org.springframework.security.web.header.HeaderWriterFilter@27b2e3e3, org.springframework.security.web.csrf.CsrfFilter@1ce6238c, org.springframework.security.web.authentication.logout.LogoutFilter@68352c58, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6d505505, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@43db2410, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@242acf38, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6149b1ea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@203f9308, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@579430ec, org.springframework.security.web.session.SessionManagementFilter@44c24c9a, org.springframework.security.web.access.ExceptionTranslationFilter@55036239, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5169937a]
+2020-05-30 18:54:22.366  INFO 35297 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 18:54:22.848  INFO 35297 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 18:54:23.162  INFO 35297 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-30 18:54:23.169  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : Started AppApplication in 8.08 seconds (JVM running for 9.891)
+2020-05-30 18:57:50.239  INFO 35297 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-30 18:57:50.251  INFO 35297 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-05-30 18:57:50.309 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 18:57:50.311 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 18:57:50.312 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 18:57:50.695 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 18:57:50.695 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=4, employeesNumber=9, projectsByCountedStage=[{"value":2,"label":"INPROGRESS"},{"value":1,"label":"COMPLETED"},{"value":1,"label":"NOTSTARTED"}], EmployeesByCountedStatus=[{"value":3,"label":"JUNIOR"},{"value":3,"label":"INTERMADIARY"},{"value":3,"label":"SENIOR"}], employeesProjectCount=[]}]
+2020-05-30 18:57:50.696 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 18:57:51.215 DEBUG 35297 --- [http-nio-8080-exec-2] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 18:57:51.216 DEBUG 35297 --- [http-nio-8080-exec-2] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 18:57:51.216 DEBUG 35297 --- [http-nio-8080-exec-2] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 18:57:51.284 DEBUG 35297 --- [http-nio-8080-exec-2] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 18:57:51.285 DEBUG 35297 --- [http-nio-8080-exec-2] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=4, employeesNumber=9, projectsByCountedStage=[{"value":2,"label":"INPROGRESS"},{"value":1,"label":"COMPLETED"},{"value":1,"label":"NOTSTARTED"}], EmployeesByCountedStatus=[{"value":3,"label":"JUNIOR"},{"value":3,"label":"INTERMADIARY"},{"value":3,"label":"SENIOR"}], employeesProjectCount=[]}]
+2020-05-30 18:57:51.285 DEBUG 35297 --- [http-nio-8080-exec-2] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 18:58:35.792 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 18:58:35.792 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.ProjectController => displayProjects() with arguments[s] = [{}]
+2020-05-30 18:58:35.792 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 18:58:35.847 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 18:58:35.861 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.ProjectController => displayProjects() with arguments[s] = [{projects=[Project(project_id=1, name=Large Production Deploy, stage=NOTSTARTED, description=This requires all hands on deck for the final deployment of the software into production, employees=[]), Project(project_id=2, name=New Employee Budget, stage=COMPLETED, description=Decide on a new employee bonus budget for the year and figureout who will be promoted, employees=[]), Project(project_id=3, name=Office Reconstruction, stage=INPROGRESS, description=The office building in Monroe has been damaged due to hurricane in the region. This needs to be reconstructed, employees=[]), Project(project_id=4, name=Improve Intranet Security, stage=INPROGRESS, description=With the recent data hack, the office security needs to be improved and proper security team needs to be hired for implementation, employees=[])]}]
+2020-05-30 18:58:35.861 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 18:58:44.650 DEBUG 35297 --- [http-nio-8080-exec-9] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 18:58:44.650 DEBUG 35297 --- [http-nio-8080-exec-9] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 18:58:44.651 DEBUG 35297 --- [http-nio-8080-exec-9] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 18:58:44.673 DEBUG 35297 --- [http-nio-8080-exec-9] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 18:58:44.673 DEBUG 35297 --- [http-nio-8080-exec-9] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=4, employeesNumber=9, projectsByCountedStage=[{"value":2,"label":"INPROGRESS"},{"value":1,"label":"COMPLETED"},{"value":1,"label":"NOTSTARTED"}], EmployeesByCountedStatus=[{"value":3,"label":"JUNIOR"},{"value":3,"label":"INTERMADIARY"},{"value":3,"label":"SENIOR"}], employeesProjectCount=[]}]
+2020-05-30 18:58:44.674 DEBUG 35297 --- [http-nio-8080-exec-9] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:00:12.476 DEBUG 35297 --- [http-nio-8080-exec-5] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:00:12.477 DEBUG 35297 --- [http-nio-8080-exec-5] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.ProjectController => displayProjects() with arguments[s] = [{}]
+2020-05-30 19:00:12.478 DEBUG 35297 --- [http-nio-8080-exec-5] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:00:12.483 DEBUG 35297 --- [http-nio-8080-exec-5] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:00:12.498 DEBUG 35297 --- [http-nio-8080-exec-5] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.ProjectController => displayProjects() with arguments[s] = [{projects=[Project(project_id=1, name=Large Production Deploy, stage=NOTSTARTED, description=This requires all hands on deck for the final deployment of the software into production, employees=[]), Project(project_id=2, name=New Employee Budget, stage=COMPLETED, description=Decide on a new employee bonus budget for the year and figureout who will be promoted, employees=[]), Project(project_id=3, name=Office Reconstruction, stage=INPROGRESS, description=The office building in Monroe has been damaged due to hurricane in the region. This needs to be reconstructed, employees=[]), Project(project_id=4, name=Improve Intranet Security, stage=INPROGRESS, description=With the recent data hack, the office security needs to be improved and proper security team needs to be hired for implementation, employees=[])]}]
+2020-05-30 19:00:12.498 DEBUG 35297 --- [http-nio-8080-exec-5] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:05:55.560  INFO 35297 --- [Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:05:55.563  INFO 35297 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:05:56.009  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 35297 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 19:05:56.010 DEBUG 35297 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 19:05:56.010  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 19:05:56.535  INFO 35297 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 19:05:56.569  INFO 35297 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 3 JPA repository interfaces.
+2020-05-30 19:05:57.285  INFO 35297 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 19:05:57.311  INFO 35297 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1297 ms
+2020-05-30 19:05:57.415  INFO 35297 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 19:05:57.665  WARN 35297 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 19:05:57.736  INFO 35297 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:05:58.034  WARN 35297 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 19:05:58.199  INFO 35297 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a509957, org.springframework.security.web.context.SecurityContextPersistenceFilter@47a1ec9b, org.springframework.security.web.header.HeaderWriterFilter@4a73d7a8, org.springframework.security.web.csrf.CsrfFilter@244918ad, org.springframework.security.web.authentication.logout.LogoutFilter@2149f42d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@39c3c476, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5d121a41, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@72c0aaec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a43d426, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e599851, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@69b8687c, org.springframework.security.web.session.SessionManagementFilter@2bc1153e, org.springframework.security.web.access.ExceptionTranslationFilter@69709fe6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5b580777]
+2020-05-30 19:05:58.458  INFO 35297 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:05:58.756  INFO 35297 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 19:05:58.968  INFO 35297 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-30 19:05:58.969  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : Started AppApplication in 3.223 seconds (JVM running for 705.682)
+2020-05-30 19:05:58.971  INFO 35297 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 19:12:07.455  INFO 35297 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:12:07.457  INFO 35297 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:12:07.766  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 35297 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 19:12:07.766 DEBUG 35297 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 19:12:07.766  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 19:12:08.022  INFO 35297 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 19:12:08.044  INFO 35297 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 3 JPA repository interfaces.
+2020-05-30 19:12:08.552  INFO 35297 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 19:12:08.599  INFO 35297 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 830 ms
+2020-05-30 19:12:08.649  INFO 35297 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 19:12:09.019  WARN 35297 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 19:12:09.151  INFO 35297 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:12:09.361  WARN 35297 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 19:12:09.433  INFO 35297 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46755450, org.springframework.security.web.context.SecurityContextPersistenceFilter@332f5e8a, org.springframework.security.web.header.HeaderWriterFilter@20a5df55, org.springframework.security.web.csrf.CsrfFilter@45313ffe, org.springframework.security.web.authentication.logout.LogoutFilter@79834d14, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5ec210f0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@68ae42de, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@78cedd8d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@73457448, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d945202, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6395b1e9, org.springframework.security.web.session.SessionManagementFilter@7fad504e, org.springframework.security.web.access.ExceptionTranslationFilter@385f0ea1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@695e53de]
+2020-05-30 19:12:09.516  INFO 35297 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:12:09.746  INFO 35297 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 19:12:10.410  INFO 35297 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-30 19:12:10.411  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : Started AppApplication in 2.844 seconds (JVM running for 1077.114)
+2020-05-30 19:12:10.414  INFO 35297 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 19:16:09.220  INFO 35297 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:16:09.223  INFO 35297 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:16:09.487  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 35297 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 19:16:09.487 DEBUG 35297 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 19:16:09.487  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 19:16:09.812  INFO 35297 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 19:16:09.840  INFO 35297 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27ms. Found 3 JPA repository interfaces.
+2020-05-30 19:16:10.160  INFO 35297 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 19:16:10.180  INFO 35297 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 690 ms
+2020-05-30 19:16:10.236  INFO 35297 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 19:16:10.541  WARN 35297 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 19:16:10.707  INFO 35297 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:16:10.904  WARN 35297 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 19:16:10.973  INFO 35297 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41c1972f, org.springframework.security.web.context.SecurityContextPersistenceFilter@1169b7c5, org.springframework.security.web.header.HeaderWriterFilter@225975c, org.springframework.security.web.csrf.CsrfFilter@47b65168, org.springframework.security.web.authentication.logout.LogoutFilter@10a8d4d7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2689995b, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5ac07c18, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5691b382, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1c014e9a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3230b531, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f379713, org.springframework.security.web.session.SessionManagementFilter@64219738, org.springframework.security.web.access.ExceptionTranslationFilter@3e167e6c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6e52f1a2]
+2020-05-30 19:16:11.052  INFO 35297 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:16:11.264  INFO 35297 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 19:16:11.352  INFO 35297 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-30 19:16:11.355  INFO 35297 --- [restartedMain] com.pma.app.AppApplication               : Started AppApplication in 2.029 seconds (JVM running for 1318.052)
+2020-05-30 19:16:11.357  INFO 35297 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-30 19:16:21.939  INFO 35297 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-30 19:16:21.946  INFO 35297 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-05-30 19:16:21.958 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:21.959 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 19:16:21.984 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:22.019 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:22.041 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=0, employeesNumber=0, projectsByCountedStage=[], EmployeesByCountedStatus=[], employeesProjectCount=[]}]
+2020-05-30 19:16:22.041 DEBUG 35297 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:22.512 DEBUG 35297 --- [http-nio-8080-exec-4] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:22.512 DEBUG 35297 --- [http-nio-8080-exec-4] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 19:16:22.512 DEBUG 35297 --- [http-nio-8080-exec-4] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:22.522 DEBUG 35297 --- [http-nio-8080-exec-4] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:22.522 DEBUG 35297 --- [http-nio-8080-exec-4] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=0, employeesNumber=0, projectsByCountedStage=[], EmployeesByCountedStatus=[], employeesProjectCount=[]}]
+2020-05-30 19:16:22.523 DEBUG 35297 --- [http-nio-8080-exec-4] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:25.300 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:25.300 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 19:16:25.300 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:25.313 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:25.314 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=0, employeesNumber=0, projectsByCountedStage=[], EmployeesByCountedStatus=[], employeesProjectCount=[]}]
+2020-05-30 19:16:25.314 DEBUG 35297 --- [http-nio-8080-exec-7] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:26.442 DEBUG 35297 --- [http-nio-8080-exec-10] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:26.442 DEBUG 35297 --- [http-nio-8080-exec-10] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 19:16:26.442 DEBUG 35297 --- [http-nio-8080-exec-10] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:26.452 DEBUG 35297 --- [http-nio-8080-exec-10] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:26.455 DEBUG 35297 --- [http-nio-8080-exec-10] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=0, employeesNumber=0, projectsByCountedStage=[], EmployeesByCountedStatus=[], employeesProjectCount=[]}]
+2020-05-30 19:16:26.456 DEBUG 35297 --- [http-nio-8080-exec-10] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:27.527 DEBUG 35297 --- [http-nio-8080-exec-3] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:27.527 DEBUG 35297 --- [http-nio-8080-exec-3] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 19:16:27.527 DEBUG 35297 --- [http-nio-8080-exec-3] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:27.559 DEBUG 35297 --- [http-nio-8080-exec-3] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:27.559 DEBUG 35297 --- [http-nio-8080-exec-3] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=0, employeesNumber=0, projectsByCountedStage=[], EmployeesByCountedStatus=[], employeesProjectCount=[]}]
+2020-05-30 19:16:27.559 DEBUG 35297 --- [http-nio-8080-exec-3] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:32.512 DEBUG 35297 --- [http-nio-8080-exec-6] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:32.512 DEBUG 35297 --- [http-nio-8080-exec-6] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 19:16:32.512 DEBUG 35297 --- [http-nio-8080-exec-6] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:32.519 DEBUG 35297 --- [http-nio-8080-exec-6] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:16:32.520 DEBUG 35297 --- [http-nio-8080-exec-6] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=0, employeesNumber=0, projectsByCountedStage=[], EmployeesByCountedStatus=[], employeesProjectCount=[]}]
+2020-05-30 19:16:32.520 DEBUG 35297 --- [http-nio-8080-exec-6] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:16:34.971  INFO 35297 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:16:34.972  INFO 35297 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:16:43.669  INFO 37290 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 37290 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 19:16:43.735 DEBUG 37290 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 19:16:43.736  INFO 37290 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 19:16:43.864  INFO 37290 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-30 19:16:43.978  INFO 37290 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 19:16:43.980  INFO 37290 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 19:16:45.616  INFO 37290 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 19:16:45.709  INFO 37290 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 3 JPA repository interfaces.
+2020-05-30 19:16:47.154  INFO 37290 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 19:16:47.278  INFO 37290 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3297 ms
+2020-05-30 19:16:47.465  INFO 37290 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 19:16:48.557  WARN 37290 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 19:16:48.668  INFO 37290 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:16:49.101  WARN 37290 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 19:16:49.253  INFO 37290 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6103ddfe, org.springframework.security.web.context.SecurityContextPersistenceFilter@7676142a, org.springframework.security.web.header.HeaderWriterFilter@39d3cc32, org.springframework.security.web.csrf.CsrfFilter@72a038de, org.springframework.security.web.authentication.logout.LogoutFilter@1c384091, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5000196e, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@28a47aef, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@1e97cf9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bb93703, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44aaad1d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34e211a6, org.springframework.security.web.session.SessionManagementFilter@68c154fb, org.springframework.security.web.access.ExceptionTranslationFilter@151c890b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7dd6721]
+2020-05-30 19:16:49.409  INFO 37290 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:16:49.691  INFO 37290 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 19:16:50.023  WARN 37290 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.5/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-30 19:16:50.024  WARN 37290 --- [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.5/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.5/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.5/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.5/java.util.concurrent.LinkedBlockingQueue.poll(LinkedBlockingQueue.java:458)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.5/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.5/java.lang.Thread.run(Thread.java:834)
+2020-05-30 19:16:50.031  INFO 37290 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-05-30 19:16:50.043 ERROR 37290 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: com.pma.app.entities.Project.employees, could not initialize proxy - no Session
+	at org.hibernate.collection.internal.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:606) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.collection.internal.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:218) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.collection.internal.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:585) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.collection.internal.AbstractPersistentCollection.write(AbstractPersistentCollection.java:409) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at org.hibernate.collection.internal.PersistentBag.add(PersistentBag.java:407) ~[hibernate-core-5.4.12.Final.jar:5.4.12.Final]
+	at com.pma.app.services.ProjectEmployeeService.assignProjectToEmployee(ProjectEmployeeService.java:28) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.loadData(BootstrapDev.java:94) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.onApplicationEvent(BootstrapDev.java:44) ~[classes/:na]
+	at com.pma.app.bootstrapData.BootstrapDev.onApplicationEvent(BootstrapDev.java:20) ~[classes/:na]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:897) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.pma.app.AppApplication.main(AppApplication.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+
+2020-05-30 19:16:50.050  INFO 37290 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:16:50.051  INFO 37290 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:19:48.799  INFO 37607 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 37607 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 19:19:48.803 DEBUG 37607 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 19:19:48.803  INFO 37607 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 19:19:48.908  INFO 37607 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-30 19:19:48.909  INFO 37607 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 19:19:48.910  INFO 37607 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 19:19:50.631  INFO 37607 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 19:19:50.787  INFO 37607 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90ms. Found 3 JPA repository interfaces.
+2020-05-30 19:19:52.282  INFO 37607 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 19:19:52.374  INFO 37607 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3461 ms
+2020-05-30 19:19:52.568  INFO 37607 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 19:19:53.692  WARN 37607 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 19:19:54.025  INFO 37607 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:19:54.576  WARN 37607 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 19:19:54.799  INFO 37607 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@726c06e3, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ac4b38b, org.springframework.security.web.header.HeaderWriterFilter@4babef64, org.springframework.security.web.csrf.CsrfFilter@483fdffe, org.springframework.security.web.authentication.logout.LogoutFilter@671e36e2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@23cbb2d4, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@34eae776, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@145d895e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@328b9271, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@168bf6e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51272c73, org.springframework.security.web.session.SessionManagementFilter@2b05418c, org.springframework.security.web.access.ExceptionTranslationFilter@7dc5658b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8dafce2]
+2020-05-30 19:19:55.011  INFO 37607 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:19:55.363  INFO 37607 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 19:19:55.739  INFO 37607 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-30 19:19:55.746  INFO 37607 --- [restartedMain] com.pma.app.AppApplication               : Started AppApplication in 7.771 seconds (JVM running for 9.636)
+2020-05-30 19:20:05.644  INFO 37607 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-30 19:20:05.655  INFO 37607 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-05-30 19:20:05.711 DEBUG 37607 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:20:05.715 DEBUG 37607 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 19:20:05.715 DEBUG 37607 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:20:05.952 DEBUG 37607 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:20:05.953 DEBUG 37607 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=4, employeesNumber=9, projectsByCountedStage=[{"value":2,"label":"INPROGRESS"},{"value":1,"label":"COMPLETED"},{"value":1,"label":"NOTSTARTED"}], EmployeesByCountedStatus=[{"value":3,"label":"JUNIOR"},{"value":3,"label":"INTERMADIARY"},{"value":3,"label":"SENIOR"}], employeesProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@21f03cae]}]
+2020-05-30 19:20:05.954 DEBUG 37607 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:26:04.592  INFO 37607 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:26:04.594  INFO 37607 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:26:13.719  INFO 38169 --- [restartedMain] com.pma.app.AppApplication               : Starting AppApplication on Fofanas-MacBook-Air.local with PID 38169 (/Users/Elimane/PMA/target/classes started by Elimane in /Users/Elimane/PMA)
+2020-05-30 19:26:13.723 DEBUG 38169 --- [restartedMain] com.pma.app.AppApplication               : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-30 19:26:13.723  INFO 38169 --- [restartedMain] com.pma.app.AppApplication               : The following profiles are active: dev
+2020-05-30 19:26:13.892  INFO 38169 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in /Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/Users/Elimane/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-05-30 19:26:13.905  INFO 38169 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-30 19:26:13.911  INFO 38169 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-30 19:26:15.873  INFO 38169 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-30 19:26:16.022  INFO 38169 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132ms. Found 3 JPA repository interfaces.
+2020-05-30 19:26:17.475  INFO 38169 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-30 19:26:17.621  INFO 38169 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3706 ms
+2020-05-30 19:26:17.847  INFO 38169 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5433/pmaSpringDb'
+2020-05-30 19:26:19.323  WARN 38169 --- [restartedMain] o.h.t.s.i.e.ScriptSourceInputFromFile    : Specified schema generation script file [drop.sql] did not exist for reading
+2020-05-30 19:26:19.435  INFO 38169 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-30 19:26:20.179  WARN 38169 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-30 19:26:20.611  INFO 38169 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27c6f2fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@7fc6ba3a, org.springframework.security.web.header.HeaderWriterFilter@2e431978, org.springframework.security.web.csrf.CsrfFilter@c7c9ed9, org.springframework.security.web.authentication.logout.LogoutFilter@6ae2b0f6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@41b70f1, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@512f7a9c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5e1c6821, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a825bbe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35b73ad3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39411e87, org.springframework.security.web.session.SessionManagementFilter@322cebf0, org.springframework.security.web.access.ExceptionTranslationFilter@736464d1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@221aa094]
+2020-05-30 19:26:20.756  INFO 38169 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 19:26:21.051  INFO 38169 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-30 19:26:21.624  INFO 38169 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-30 19:26:21.629  INFO 38169 --- [restartedMain] com.pma.app.AppApplication               : Started AppApplication in 8.585 seconds (JVM running for 10.144)
+2020-05-30 19:26:22.501  INFO 38169 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-30 19:26:22.518  INFO 38169 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-05-30 19:26:22.597 DEBUG 38169 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:26:22.600 DEBUG 38169 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : -----------BEFORE METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{}]
+2020-05-30 19:26:22.601 DEBUG 38169 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
+2020-05-30 19:26:22.918 DEBUG 38169 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : 
+ 
+ 
+
+2020-05-30 19:26:22.918 DEBUG 38169 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : -----------AFTER METHOD EXECUTION----------- 
+ com.pma.app.controllers.HomeController => displayHome() with arguments[s] = [{appName=PMA DEV 1.0, projectsNumber=4, employeesNumber=9, projectsByCountedStage=[{"value":2,"label":"INPROGRESS"},{"value":1,"label":"COMPLETED"},{"value":1,"label":"NOTSTARTED"}], EmployeesByCountedStatus=[{"value":3,"label":"JUNIOR"},{"value":3,"label":"INTERMADIARY"},{"value":3,"label":"SENIOR"}], employeesProjectCount=[org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@5f1706cd, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@5074c540, org.springframework.data.jpa.repository.query.AbstractJpaQuery$TupleConverter$TupleBackedMap@3409fdb7]}]
+2020-05-30 19:26:22.919 DEBUG 38169 --- [http-nio-8080-exec-1] c.p.app.logging.ApplicationLoggerAspect  : _____________________________
+ 
+ 
+
