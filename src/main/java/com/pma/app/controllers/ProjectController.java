@@ -1,17 +1,14 @@
 package com.pma.app.controllers;
 
-import com.pma.app.dao.EmployeeRepository;
-import com.pma.app.dao.ProjectRepository;
-import com.pma.app.entities.Employee;
 import com.pma.app.entities.Project;
 import com.pma.app.services.EmployeeService;
 import com.pma.app.services.ProjectService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * Created by Elimane on Mar, 2020, at 02:05
@@ -68,6 +65,7 @@ public class ProjectController {
     public String displayProjects(Model model)
     {
         model.addAttribute("projects", proServ.findAll());
+
 
         return "projects/projects";
     }

@@ -1,8 +1,10 @@
 package com.pma.app.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
@@ -25,6 +27,7 @@ public class Employee {
     private String firstName;
     private String LastName;
     private String email;
+    @ToString.Exclude//To avoid 500 error code when I am adding new project and assinging it to employee
     @ManyToMany(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH}, fetch = FetchType.LAZY)
     @JoinTable(name = "project_employee",joinColumns = @JoinColumn(name="employee_id"),inverseJoinColumns = @JoinColumn(name="project_id"))
     private List<Project> projects;

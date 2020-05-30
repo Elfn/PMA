@@ -40,7 +40,7 @@ public class SecurityController {
     public  String saveUser(Model model,UserAccount user)
     {
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-
+        user.setRole("ROLE_USER");
         accountService.save(user);
 
         return "redirect:/";
