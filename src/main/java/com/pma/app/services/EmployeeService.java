@@ -6,8 +6,13 @@ import com.pma.app.dto.EmployeeProject;
 import com.pma.app.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.awt.print.Pageable;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,7 +23,7 @@ import java.util.Optional;
 public class EmployeeService implements EmployeeRepository{
 
     @Autowired
-    //@Qualifier(value = "employeeRepository")
+    @Qualifier(value = "employeeRepository")
     private  EmployeeRepository empRepo;
 
 
@@ -40,7 +45,13 @@ public class EmployeeService implements EmployeeRepository{
     }
 
     @Override
+    public Employee findByEmail(String email) {
+        return empRepo.findByEmail(email);
+    }
+
+    @Override
     public <S extends Employee> S save(S s) {
+
         return empRepo.save(s);
     }
 
@@ -51,7 +62,7 @@ public class EmployeeService implements EmployeeRepository{
 
     @Override
     public Optional<Employee> findById(Long aLong) {
-        return Optional.empty();
+        return empRepo.findById(aLong);
     }
 
     @Override
@@ -63,6 +74,7 @@ public class EmployeeService implements EmployeeRepository{
     public Iterable<Employee> findAll() {
         return empRepo.findAll();
     }
+
 
     @Override
     public Iterable<Employee> findAllById(Iterable<Long> iterable) {
@@ -76,12 +88,12 @@ public class EmployeeService implements EmployeeRepository{
 
     @Override
     public void deleteById(Long aLong) {
-
+        empRepo.deleteById(aLong);
     }
 
     @Override
     public void delete(Employee employee) {
-
+            empRepo.delete(employee);
     }
 
     @Override
@@ -92,5 +104,15 @@ public class EmployeeService implements EmployeeRepository{
     @Override
     public void deleteAll() {
 
+    }
+
+    @Override
+    public Iterable<Employee> findAll(Sort sort) {
+        return null;
+    }
+
+    @Override
+    public Page<Employee> findAll(org.springframework.data.domain.Pageable pageable) {
+        return empRepo.findAll(pageable);
     }
 }

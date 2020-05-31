@@ -8,10 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.validation.Valid;
 
 /**
  * Created by Elimane on Mar, 2020, at 18:54
@@ -35,9 +38,13 @@ public class EmployeeController {
     }
 
     @PostMapping("/save")
-    public String createEmployee(Employee employee, Model model)
+    public String createEmployee(@Valid Employee employee, Model model, BindingResult bindingResult)
     {
         empServ.save(employee);
+
+        if (bindingResult.hasErrors()) {
+            return "employees/new-employee";
+        }
 
         //Use redirect to prevent duplicate submissions
         return "redirect:/employees";
