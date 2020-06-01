@@ -5,6 +5,9 @@ import com.pma.app.dto.DataChart;
 import com.pma.app.entities.Project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,7 +52,7 @@ public class ProjectService implements ProjectRepository {
 
     @Override
     public Optional<Project> findById(Long aLong) {
-        return Optional.empty();
+        return proRepo.findById(aLong);
     }
 
     @Override
@@ -90,5 +93,15 @@ public class ProjectService implements ProjectRepository {
     @Override
     public void deleteAll() {
 
+    }
+
+    @Override
+    public Iterable<Project> findAll(Sort sort) {
+        return proRepo.findAll(sort);
+    }
+
+    @Override
+    public Page<Project> findAll(Pageable pageable) {
+        return null;
     }
 }

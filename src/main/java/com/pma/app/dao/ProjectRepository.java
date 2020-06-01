@@ -5,7 +5,9 @@ import com.pma.app.entities.Project;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,8 +16,8 @@ import java.util.List;
  * Created by Elimane on Mar, 2020, at 17:27
  */
 //@Profile("prod")
-//@Repository
-public interface ProjectRepository  extends CrudRepository<Project, Long> {
+@Repository
+public interface ProjectRepository  extends PagingAndSortingRepository<Project, Long> {
 
 //    @Query(nativeQuery = true , value = "SELECT COUNT(p.project_id) FROM Project p WHERE p.stage = :stage")
 //    public List<Integer> findCountProjectsByStage(@Param("stage") String stage);

@@ -36,7 +36,7 @@ public class Employee {
 
     @NotNull
     @Email(message="*Must be a valid email address")
-    @UniqueValue//DOESNT WORK!!!!!
+    @UniqueValue
     //@Column(unique = true)
     private String email;
 
@@ -46,6 +46,7 @@ public class Employee {
     @JsonIgnore//To avoid infinite loop between entities relashionship during serialization
     private List<Project> projects;
 
+    @NotNull
     private String status;
 
     public Employee(String firstName, String lastName, String email, String status) {

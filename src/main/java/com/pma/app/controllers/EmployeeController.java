@@ -9,10 +9,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -37,18 +35,20 @@ public class EmployeeController {
         return "employees/new-employee";
     }
 
+
+
     @PostMapping("/save")
-    public String createEmployee(@Valid Employee employee, Model model, BindingResult bindingResult)
-    {
+    public String createEmployee(Model model, @Valid Employee employee, Errors errors) {
+
+        if(errors.hasErrors())
+            return "employees/new-employee";
+
+        // save to the database using an employee crud repository
         empServ.save(employee);
 
-        if (bindingResult.hasErrors()) {
-            return "employees/new-employee";
-        }
-
-        //Use redirect to prevent duplicate submissions
         return "redirect:/employees";
     }
+
 
     @GetMapping
     public String displayEmployees(Model model)
@@ -58,7 +58,24 @@ public class EmployeeController {
         return "employees/employees";
     }
 
+    @GetMapping(path = "/update")
+    public String displayUpdateForm(@RequestParam("id") Long id, Model model)
+    {
+        Employee emp =  empServ.findById(id).get();
 
+        model.addAttribute("employee",emp);
 
+        return "employees/new-employee";
+    }
+
+    @GetMapping(path = "/delete")
+    public String delete(@RequestParam("id") Long id, Model model)
+    {
+        Employee emp =  empServ.findById(id).get();
+
+        empServ.delete(emp);
+
+        return "redirect:/employees";
+    }
 
 }

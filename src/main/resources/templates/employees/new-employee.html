@@ -7,19 +7,23 @@
 <div class="container mt-5">
     <form th:action="@{/employees/save}" th:object="${employee}" method="POST">
         <div class="form-group">
+
+            <!--This will be used to bind to the employee that has been clicked for update-->
+            <input type="hidden" th:field="${employee.employee_id}"/>
+
             <label for="fname">FirstName</label>
             <input type="text" th:field="${employee.firstName}" class="form-control" id="fname" placeholder="Employee first-name">
-            <td th:if="${#fields.hasErrors('firstName')}" th:errors="${employee.firstName}">firstName Error</td>
+            <span th:if="${#fields.hasErrors('firstName')}" th:errors="${employee.firstName}"></span>
         </div>
         <div class="form-group">
             <label for="lname">LastName</label>
             <input type="text" th:field="${employee.lastName}" class="form-control" id="lname" placeholder="Employee last-name">
-            <td th:if="${#fields.hasErrors('lastName')}" th:errors="${employee.lastName}">lastName Error</td>
+            <span th:if="${#fields.hasErrors('lastName')}" th:errors="${employee.lastName}"></span>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
             <input type="text" th:field="${employee.email}" class="form-control" id="email" placeholder="Employee email">
-            <td th:if="${#fields.hasErrors('email')}" th:errors="${employee.email}">Email Error</td>
+            <span th:if="${#fields.hasErrors('email')}" th:errors="${employee.email}"></span>
         </div>
         <div class="form-group">
             <label for="stage">Stage</label>
@@ -29,7 +33,7 @@
                 <option th:value="SENIOR"> Senior</option>
                 <option th:value="INTERMEDIARY"> Intermediary</option>
             </select>
-            <td th:if="${#fields.hasErrors('status')}" th:errors="${employee.status}">Status Error</td>
+            <span th:if="${#fields.hasErrors('status')}" th:errors="${employee.status}"></span>
         </div>
 
         <button type="submit" class="btn btn-primary">Create Employee</button>

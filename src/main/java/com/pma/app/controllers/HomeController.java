@@ -80,6 +80,8 @@ public class HomeController {
 //    }
 
 
+
+
     @GetMapping("/employee/projects/{empId}")
     public void listprojects(@PathVariable Long empId, Model model) throws Exception {
         log.debug("Getting projects list for recipe id: " + empId);
