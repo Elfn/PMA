@@ -59,12 +59,12 @@ public class BootstrapDev implements ApplicationListener<ContextRefreshedEvent> 
 
 //------------------------------------INSERT EMPLOYEES------------------------------
     Employee e1 = new Employee("John","Warton","warton@gmail.com","SENIOR");
-    Employee e2 = new Employee("Mike","Lanister","lanister@gmail.com","INTERMADIARY");
+    Employee e2 = new Employee("Mike","Lanister","lanister@gmail.com","INTERMEDIARY");
     Employee e3 = new Employee("Steve","Reeves","Reeves@gmail.com","JUNIOR");
     Employee e4 = new Employee("Ronald","Connor","connor@gmail.com","JUNIOR");
     Employee e5 = new Employee("Jim","Salvator","Sal@gmail.com","SENIOR");
-    Employee e6 = new Employee("Peter","Henley","henley@gmail.com","INTERMADIARY");
-    Employee e7 = new Employee("Richard","Carson","carson@gmail.com","INTERMADIARY");
+    Employee e6 = new Employee("Peter","Henley","henley@gmail.com","INTERMEDIARY");
+    Employee e7 = new Employee("Richard","Carson","carson@gmail.com","INTERMEDIARY");
     Employee e8 = new Employee("Honor","Miles","miles@gmail.com","JUNIOR");
     Employee e9 = new Employee("Tony","Roggers","roggers@gmail.com","SENIOR");
 

@@ -40,7 +40,7 @@ public class EmployeeController {
     @PostMapping("/save")
     public String createEmployee(Model model, @Valid Employee employee, Errors errors) {
 
-        if(errors.hasErrors())
+        if(errors.hasErrors() || employee.getStatus() == "")
             return "employees/new-employee";
 
         // save to the database using an employee crud repository

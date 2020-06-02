@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
@@ -27,14 +28,14 @@ public class Employee {
     @SequenceGenerator(name="employee_seq",sequenceName="employee_seq", allocationSize = 1)
     private long employee_id;
 
-    @NotNull
+    @NotBlank(message="*Must give a first name")
     @Size(min = 2, max = 50)
     private String firstName;
-    @NotNull
-    @Size(min = 2, max = 50)
-    private String LastName;
+    @NotBlank(message="*Must give a last name")
+    @Size(min = 3, max = 50)
+    private String lastName;
 
-    @NotNull
+    @NotBlank
     @Email(message="*Must be a valid email address")
     @UniqueValue
     //@Column(unique = true)
@@ -46,12 +47,12 @@ public class Employee {
     @JsonIgnore//To avoid infinite loop between entities relashionship during serialization
     private List<Project> projects;
 
-    @NotNull
+    @NotBlank(message = "*You have to select a status")
     private String status;
 
     public Employee(String firstName, String lastName, String email, String status) {
         this.firstName = firstName;
-        LastName = lastName;
+        lastName = lastName;
         this.email = email;
         this.status = status;
     }
