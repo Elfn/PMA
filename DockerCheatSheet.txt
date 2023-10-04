@@ -40,7 +40,7 @@ docker stop <ID>
 docker rmi image <image name>
 
 # Create an image from a container that was previously run.
-docker container commit -a "Imtiaz Ahmad imtiaz@jobreadyprogrammer.com" <ID of Container> <image name>
+docker container commit -a "Elimane elfn@gmail.com" <ID of Container> <image name>
 
 # clear away all stopped containers
 docker container prune
